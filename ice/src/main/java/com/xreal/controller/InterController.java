@@ -1,5 +1,6 @@
 package com.xreal.controller;
 
+ import com.xreal.dao.ProductMapper;
  import com.xreal.entity.Product;
 import com.xreal.service.ProductService;
  import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.ArrayList;
 import java.util.List;
 
-@Controller
+/*@Controller
 public class InterController {
     @Autowired
     ProductService productService;
@@ -24,4 +25,23 @@ public class InterController {
 
         return productArrayList;
     }
+}*/
+
+
+@Controller
+public class InterController {
+  @Autowired
+  ProductService productService;
+  @RequestMapping("/project")
+  @ResponseBody
+  public List<Product> myProject() {
+
+    List<Product> productArrayList = new ArrayList<Product>();
+    Product product = new Product();
+    //product.setNums(18);
+    //product.setProductName("皮裤");
+    productArrayList = productService.SelectAll();
+    //productArrayList.add(product);
+    return productArrayList;
+  }
 }

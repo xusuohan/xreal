@@ -6,9 +6,10 @@ import java.util.List;
 
 
 
+/*
 @Mapper
 @Repository
 public interface ProductMapper {
    @Select("select * from product")
    public List<Product> SelectAll();
-}
+}*/
