@@ -19,11 +19,11 @@ public class TestKafkaProducerController {
   @Autowired
   //定义kafka模板
   private KafkaTemplate<String, String> kafkaTemplate;
-   @RequestMapping("send")
+  /* @RequestMapping("send")
   public String send(String msg){
      //使用kafka模板发送信息
      kafkaTemplate.send("test2", msg);
      return "发送消息"+msg+"success";
-  }
+  }*/
 }
 

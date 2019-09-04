@@ -20,11 +20,11 @@ import org.springframework.stereotype.Component;
   @Autowired
   private WebSocket webSocket;
   private static final Logger LOG = LoggerFactory.getLogger(TestConsumer.class);
-  @KafkaListener(topics = "test2")
+  /*@KafkaListener(topics = "test2")
   //定义此消费者接收topic为“test2”的消息
   public void listen (ConsumerRecord<?, ?> record) throws Exception {
     LOG.info("topic = %s, offset = %d, value = %s \n", record.topic(), record.offset(), record.value());
     LOG.info(record.toString());
     webSocket.sendOneMessage("DPS007", "来自kafka的问候:"+record.value().toString());
-  }
+  }*/
 }

@@ -25,10 +25,10 @@ public class ScheduledTasks {
   private KafkaTemplate<String, String> kafkaTemplate;
   private static final Logger LOG = LoggerFactory.getLogger(ScheduledTasks.class);
   private static final SimpleDateFormat DATA_RORMAT = new SimpleDateFormat("HH:mm:ss");
-  @Scheduled(fixedRate = 5000)
+ /* @Scheduled(fixedRate = 5000)
   public void reportCurrentTime() {
     String msg = "kafka生成随机数："+(Math.random()*1000);
     kafkaTemplate.send("test2", msg);
     LOG.info("当前时间：", DATA_RORMAT.format(new Date()));
-  }
+  }*/
 }
