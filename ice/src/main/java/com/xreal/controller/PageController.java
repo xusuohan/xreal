@@ -19,8 +19,12 @@ public class PageController {
         return "indexvue";
     }
 
-    @RequestMapping("/index")
+    @RequestMapping("/indexracate")
     public String getIce() {
+        return "indexrecate";
+    }
+    @RequestMapping("/index")
+    public String getDashboad() {
         return "index";
     }
 
